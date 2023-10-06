@@ -6,15 +6,15 @@
 
 # 보유 기술
 * SPL
-* Python(multiprocessing, threading, requests, re, logging, openpyxl, flask)
+* Python(multiprocessing, threading, requests, re, logging, flask)
 * RPA(selenium)
-* Tensorflow(CNN, RNN, LSTM, GRU, BERT)
+* TensorFlow(CNN, RNN, LSTM, GRU, BERT)
 * 보안 관제
 
 # 프로젝트
 **11번가 보안 관제**
 * 2020/01/13 ~ 2023/07/25
-* 주요 업무 : Anti-DDoS, APT, EDR, WAF, Suricata 이벤트 분석 대응
+* 주요 업무 : Anti-DDoS, APT, EDR, WAF, IDS, IPS 이벤트 분석 대응
 
 # 개인 프로젝트
 **Splunk 대시보드**
@@ -27,7 +27,7 @@
 DDoS Alert 대시보드
 * 제작 기간 : 2022/09/19
 * 사용 기술 : SPL
-* 사용 목적 : Anti-DDoS 장비의 Attack Alert을 시각화하여 빠른 인지와 전파를 돕기 위해 작성
+* 사용 목적 : Anti-DDoS 장비의 Attack Alert을 시각화 하여 빠른 인지와 전파를 돕기 위해 작성
 
 이벤트 정/오탐 현황 대시보드
 * 제작 기간 : 2022/10/20 ~ 2023/04/26
@@ -47,20 +47,20 @@ Abuse 이벤트 로그 조회 대시보드
 내부 사용자 조회 대시보드
 * 제작 기간 : 2023/04/30 ~ 2023/05/03
 * 사용 기술 : SPL
-* 사용 목적 : 악성 코드등 내부 IP 이벤트가 발생한 경우 사용자 조회를 위해 작성 
+* 사용 목적 : 악성 코드 등 내부 IP 이벤트가 발생한 경우 사용자 조회를 위해 작성
 
 
-**RPA**
+</br>**RPA**
 
 Splunk Alert Manager Incident 자동 처리
 * 제작 기간 : 2022/11/18 ~ 2023/07/16
-* 사용 기술 : Python, Selenium, Tensorflow
-* 사용 목적 : 오탐 이벤트를 처리할 때 발생하는 부하를 줄이고, 정탐 이벤트 분석 시간을 늘리기 위해 제작
-* 주요 기능 : 이벤트 발생 -> 페이로드 예측 -> 일부 정탐(엑셀 참조->requests로 검증) 및 오탐(정확도90% 이상의 판단이 필요하지 않는 단순 문자열 일치) 이벤트 자동 처리
+* 사용 기술 : Python, Selenium, TensorFlow
+* 사용 목적 : 오탐 이벤트 작업시 발생하는 부하를 줄이고, 정탐 이벤트 분석 고도화를 위해 제작
+* 주요 기능 : 이벤트 발생 -> 페이로드 예측 -> 일부 정탐(엑셀 참조->응답 코드 기반 검증 자동화) 및 오탐(정확도90% 이상의 판단이 필요하지 않는 단순 문자열 일치) 이벤트 자동 처리
 
 IDS 이벤트 모델 정/오탐 예측 대시보드
 * 제작 기간 : 2023/01/16 ~ 2023/05/27
-* 사용 기술 : Python, Selenium, Tensorflow
+* 사용 기술 : Python, Selenium, TensorFlow
 * 사용 목적 : 작업자의 휴먼 에러를 줄이고 초급 관제원의 정/오탐 판단에 도움을 주기 위해 제작
 * 주요 기능 : 이벤트의 정/오탐 예측률을 Splunk 대시보드에 표현
 
@@ -89,7 +89,7 @@ Undeleted Block IP
 * 주요 기능 : IP 차단 페이지에서 삭제되지 않은 IP를 추출하는 프로그램, 평균 작업 시간 18초 -> 0.14초(건)
 
 
-**기타**
+</br>**기타**
 
 VPN-Route
 * 제작 기간 : 2022/10/22
@@ -101,10 +101,10 @@ Anti-Spoofing
 * 제작 기간 : 2022/11/30
 * 사용 기술 : Windows cmd
 * 사용 목적 : ARP Cache Poisoning 방지를 위해 작성
-* 주요 기능 : netsh 명령어를 사용하여 사용자의 interface에 Gayteway MAC을 고정하는 bat 파일
+* 주요 기능 : netsh 명령어를 사용하여 사용자의 Interface에 Gateway MAC을 고정하는 bat 파일
 
 URL Decoder
 * 제작 기간 : 2023/03/02 ~ 2023/03/15
-* 사용 기술 : Python, Flask, Tensorflow
+* 사용 기술 : Python, Flask, TensorFlow
 * 사용 목적 : 관제원의 IDS 이벤트 분석을 돕기 위해 제작
 * 주요 기능 : 웹 페이지 입력 폼에 Encode된 Payload를 작성하면, Decode 데이터와 모델이 예측한 정/오탐률을 표시해주는 프로그램
